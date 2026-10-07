@@ -101,22 +101,16 @@ async function start() {
 
             console.log("✅ Hourly snapshot complete.");
         });
-
-        // Start Express server
-        app.listen(PORT, () => {
-            console.log(`🚀 TrendScope Server running on port ${PORT}`);
-            console.log(`📊 Historical Trend Tracking System active`);
-        });
-
-    } catch (err) {
-        console.error("❌ Server startup failed:", err.message || err);
-
-        if (err.code === "ECONNREFUSED") {
-            console.error("💡 MySQL server is not running.");
-        }
-
-        process.exit(1);
+    } catch (dbErr) {
+        console.warn("⚠️ Database initialization failed (MySQL might be stopped):", dbErr.message);
+        console.warn("⚠️ Server will continue running without database features.");
     }
+
+    // Start Express server
+    app.listen(PORT, () => {
+        console.log(`🚀 TrendScope Server running on port ${PORT}`);
+        console.log(`🌐 Frontend accessible at http://localhost:${PORT}`);
+    });
 }
 
 start();

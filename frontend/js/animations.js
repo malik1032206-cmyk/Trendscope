@@ -64,45 +64,9 @@
         });
     }
 
-    // ─── CURSOR GLOW EFFECT ────────────────────────────────────
+    // ─── CURSOR GLOW EFFECT (DISABLED FOR CLEAN NATURAL UX) ───
     function initCursorGlow() {
-        if (window.innerWidth < 768) return;
-
-        const glow = document.createElement('div');
-        glow.className = 'cursor-glow';
-        document.body.appendChild(glow);
-
-        let mouseX = 0, mouseY = 0;
-        let glowX = 0, glowY = 0;
-        let rafId = null;
-
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-            glow.classList.add('active');
-        });
-
-        document.addEventListener('mouseleave', () => {
-            glow.classList.remove('active');
-        });
-
-        function animateGlow() {
-            glowX += (mouseX - glowX) * 0.12;
-            glowY += (mouseY - glowY) * 0.12;
-            glow.style.left = glowX + 'px';
-            glow.style.top = glowY + 'px';
-            rafId = requestAnimationFrame(animateGlow);
-        }
-        animateGlow();
-
-        // Cleanup on page hide
-        document.addEventListener('visibilitychange', () => {
-            if (document.hidden) {
-                cancelAnimationFrame(rafId);
-            } else {
-                animateGlow();
-            }
-        });
+        return;
     }
 
     // ─── SMOOTH SCROLL FOR NAV LINKS ───────────────────────────
