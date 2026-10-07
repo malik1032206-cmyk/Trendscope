@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <!-- Background subtle dark gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141722"/>
+      <stop offset="100%" stop-color="#0a0c12"/>
+    </linearGradient>
+
+    <!-- Outer rim border gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.18)"/>
+      <stop offset="100%" stop-color="rgba(34,197,94,0.35)"/>
+    </linearGradient>
+
+    <!-- Emerald momentum trendline gradient -->
+    <linearGradient id="trendGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="60%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#4ade80"/>
+    </linearGradient>
+
+    <!-- Area chart fill gradient below the line -->
+    <linearGradient id="areaFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Glow filter for crisp high-density screens -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Container Base with Squircle / iOS Curve -->
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#bgGrad)"/>
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="none" stroke="url(#borderGrad)" stroke-width="1.5"/>
+
+  <!-- Subtle grid baseline -->
+  <line x1="12" y1="48" x2="52" y2="48" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Shaded momentum volume area under the trend curve -->
+  <path d="M 14 43 L 26 29 L 36 37 L 50 17 L 50 48 L 14 48 Z" fill="url(#areaFill)"/>
+
+  <!-- Primary Dynamic Trend Wave with Arrow Header -->
+  <g filter="url(#softGlow)">
+    <path d="M 14 43 L 26 29 L 36 37 L 49 17" 
+          fill="none" 
+          stroke="url(#trendGrad)" 
+          stroke-width="5" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+
+    <!-- Integrated Vector Arrowhead -->
+    <path d="M 40 17 L 50 17 L 50 27" 
+          fill="none" 
+          stroke="url(#trendGrad)" 
+          stroke-width="5" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+  </g>
+
+  <!-- Pulse Vertex Indicator on the peak point -->
+  <circle cx="26" cy="29" r="2.5" fill="#ffffff" opacity="0.9"/>
+  <circle cx="36" cy="37" r="2.5" fill="#ffffff" opacity="0.9"/>
+</svg>
