@@ -1,0 +1,49 @@
+{
+  "name": "TrendScope — YouTube Trends Analytics",
+  "short_name": "TrendScope",
+  "description": "Professional YouTube Trends Analytics Dashboard. Track viral momentum, engagement velocity, and trending content across 8+ global markets.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0c0d12",
+  "theme_color": "#0c0d12",
+  "categories": ["analytics", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Trending Videos",
+      "short_name": "Videos",
+      "description": "Jump straight to trending videos",
+      "url": "/index.html#section-videos",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Creator Leaderboard",
+      "short_name": "Creators",
+      "description": "View top rising YouTube channels",
+      "url": "/index.html#section-channels",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Historical Analytics",
+      "short_name": "History",
+      "description": "Historical trend comparison",
+      "url": "/index.html#section-history",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    }
+  ]
+}

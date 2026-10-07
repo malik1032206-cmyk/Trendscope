@@ -11,9 +11,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>TrendScope — YouTube Trends Dashboard</title>
 
-    <!-- Modern Vector Favicon -->
+    <!-- Modern Vector Favicon & App Icons -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="favicon.svg">
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="TrendScope">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,6 +72,10 @@
                 <a href="#section-saved" class="nav-item" data-section="section-saved" id="nav-saved" title="Saved">
                     <div class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
                     <span class="nav-label">Saved</span>
+                </a>
+                <a href="javascript:void(0)" class="nav-item pwa-nav-btn" onclick="window.triggerPWAInstall()" id="nav-install" title="Install App">
+                    <div class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+                    <span class="nav-label">Install App</span>
                 </a>
             </nav>
         </div>
@@ -739,6 +746,7 @@
     <script src="js/feedback.js"></script>
     <script src="js/app.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/pwa.js"></script>
 </body>
 </html>
 
